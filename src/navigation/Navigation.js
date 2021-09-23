@@ -18,6 +18,7 @@ export const Navigation = () => {
         component={SubmissionsScreen}
         options={{
           title: 'Submissions',
+          headerBackTitle: '',
           headerStyle: {backgroundColor: '#7159c1'},
           headerTintColor: 'white',
           headerStyle: {backgroundColor: 'pink'},

@@ -23,8 +23,8 @@ export const HomeScreen = () => {
       <ScrollView
         contentContainerStyle={{
           ...styles.container,
-          marginTop: top,
-          marginBottom: bottom,
+          paddingTop: top,
+          paddingBottom: bottom,
         }}
         keyboardShouldPersistTaps="handled">
         <InputList

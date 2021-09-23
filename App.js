@@ -6,23 +6,13 @@
  * @flow strict-local
  */
 
-import React from 'react';
-
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
-import {Navigation} from './src/navigation/Navigation';
+import React from 'react';
+import {StatusBar, SafeAreaView} from 'react-native';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
-import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
-
+import {combineReducers, createStore} from 'redux';
+import {Navigation} from './src/navigation/Navigation';
 import formReducer from './src/store/reducers/form';
 
 const rootReducer = combineReducers({
@@ -34,6 +24,7 @@ const store = createStore(rootReducer);
 const App = () => {
   return (
     <Provider store={store}>
+      <StatusBar backgroundColor="white" barStyle="dark-content" />
       <SafeAreaProvider>
         <NavigationContainer>
           <Navigation />
