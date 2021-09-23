@@ -7,9 +7,23 @@ export const Navigation = () => {
   const Stack = createNativeStackNavigator();
 
   return (
-    <Stack.Navigator screenOptions={{headerShown: false}}>
-      <Stack.Screen name="HomeScreen" component={HomeScreen} />
-      <Stack.Screen name="SubmissionsScreen" component={SubmissionsScreen} />
+    <Stack.Navigator>
+      <Stack.Screen
+        name="HomeScreen"
+        component={HomeScreen}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="SubmissionsScreen"
+        component={SubmissionsScreen}
+        options={{
+          title: 'Submissions',
+          headerStyle: {backgroundColor: '#7159c1'},
+          headerTintColor: 'white',
+          headerStyle: {backgroundColor: 'pink'},
+          headerTitleAlign: 'center',
+        }}
+      />
     </Stack.Navigator>
   );
 };

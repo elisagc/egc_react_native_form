@@ -1,6 +1,7 @@
 import React from 'react';
 import {TextInput, StyleSheet} from 'react-native';
-export const Input = ({field, handleOnChange}) => {
+
+export const Input = ({field, handleOnChange, inputData}) => {
   return (
     <TextInput
       style={styles.input}
@@ -8,6 +9,7 @@ export const Input = ({field, handleOnChange}) => {
       keyboardType={field.type === 'text' ? 'default' : field.type}
       maxLength={field.maxLength}
       onChangeText={value => handleOnChange(value, field.id)}
+      value={inputData[field.id]}
     />
   );
 };

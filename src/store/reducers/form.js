@@ -2,8 +2,8 @@ import {inputFields as formFields} from '../../data/formFields.json';
 import {ADD_SUBMISSION} from '../actions/form';
 
 const initialState = {
-  submissions: [], // Insert the submissions in this attribute
-  formFields, // Insert the form fields received from the JSON file
+  submissions: [],
+  formFields,
 };
 
 const formReducer = (state = initialState, action) => {
@@ -15,6 +15,7 @@ const formReducer = (state = initialState, action) => {
         submissions: newSubmissions,
       };
   }
+
   return state;
 };
 
