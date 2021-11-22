@@ -1,5 +1,3 @@
-# TaxDown Code Challenge
-
 ### Technologies
 ***
 * [React Native](https://reactnative.dev/): Version 0.65.1
